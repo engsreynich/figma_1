@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Low-Fidelity App Mockup</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Side menu toggle (CSS-only) -->
+    <input id="menu-toggle" type="checkbox" hidden />
+
+    <aside class="side-menu" aria-hidden="true">
+      <label for="menu-toggle" class="close-btn" title="Close menu">✕</label>
+      <div class="profile">
+        <div class="avatar">S</div>
+        <div class="user-info">
+          <strong>Eng Sreynich</strong>
+          <small>View profile</small>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Dashboard</a>
+        <a href="#item">Item</a>
+        <a href="#otp">OTP</a>
+        <a href="#splash">Splash</a>
+        <a href="#logout" class="danger">Logout</a>
+      </nav>
+
+      <footer>
+        <small>Version 1.0</small>
+      </footer>
+    </aside>
+
+    <!-- Page wrapper -->
+    <div class="page">
+      <header class="topbar">
+        <label for="menu-toggle" class="menu-btn" title="Open menu">☰</label>
+        <div class="brand">Low Fidelity Wireframes</div>
+        <a class="profile-btn" href="#splash">S</a>
+      </header>
+
+      <main class="container">
+        <!-- Splash screen -->
+        <section id="splash" class="screen splash">
+          <div class="card centered">
+            <div class="logo">📸</div>
+            <h1>App Name</h1>
+            <p class="subtitle">Welcome — sign in or sign up to continue</p>
+
+            <div class="row">
+              <a class="btn primary" href="#home">Sign In</a>
+              <a class="btn ghost" href="#home">Sign Up</a>
+            </div>
+
+            <div class="links">
+              <a href="#privacy">Privacy Policy</a> · <a href="#terms">Terms</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Home / Dashboard -->
+        <section id="home" class="screen home">
+          <div class="section-head">
+            <h2>Home / Dashboard</h2>
+            <p class="muted">Overview of main features</p>
+          </div>
+
+          <div class="features-grid">
+            <article class="feature">
+              <h3>Feature A</h3>
+              <p>Short description</p>
+              <a class="small-btn" href="#item">View</a>
+            </article>
+
+            <article class="feature">
+              <h3>Feature B</h3>
+              <p>Short description</p>
+              <a class="small-btn" href="#item">View</a>
+            </article>
+
+            <article class="feature">
+              <h3>Feature C</h3>
+              <p>Short description</p>
+              <a class="small-btn" href="#item">View</a>
+            </article>
+          </div>
+
+          <nav class="footer-nav">
+            <a href="#home">Home</a>
+            <a href="#features">Search</a>
+            <a href="#splash">Profile</a>
+          </nav>
+        </section>
+
+        <!-- Item detail -->
+        <section id="item" class="screen item-screen">
+          <div class="section-head">
+            <h2>Item Detail</h2>
+            <p class="muted">Product or content details</p>
+          </div>
+
+          <div class="item-card">
+            <div class="item-image" aria-hidden="true">
+              <svg viewBox="0 0 200 120" role="img" class="svgplaceholder">
+                <rect width="200" height="120" fill="#eee"></rect>
+                <text
+                  x="50%"
+                  y="50%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  font-size="12"
+                  fill="#888"
+                >
+                  Image
+                </text>
+              </svg>
+            </div>
+
+            <div class="item-info">
+              <h3>Camera Model X</h3>
+              <p class="muted">
+                Short description about the item: features, specs, or notes.
+              </p>
+
+              <div class="price-row">
+                <div class="price">Price: <strong>$249</strong></div>
+                <div class="actions">
+                  <a class="btn small" href="#otp">Buy Now</a>
+                  <a class="btn ghost small" href="#home">Back</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- OTP / Verification -->
+        <section id="otp" class="screen otp-screen">
+          <div class="card centered small-card">
+            <h2>Verify with OTP</h2>
+            <p class="muted">Enter the 4-digit code sent to your phone</p>
+
+            <form class="otp-form" onsubmit="return false;">
+              <div class="otp-inputs">
+                <input inputmode="numeric" pattern="[0-9]*" maxlength="1" />
+                <input inputmode="numeric" pattern="[0-9]*" maxlength="1" />
+                <input inputmode="numeric" pattern="[0-9]*" maxlength="1" />
+                <input inputmode="numeric" pattern="[0-9]*" maxlength="1" />
+              </div>
+
+              <div class="row">
+                <button class="btn primary" type="submit">Submit</button>
+                <a class="btn ghost" href="#otp">Resend</a>
+              </div>
+
+              <p class="muted small">Didn't get it? Try again in 30s</p>
+            </form>
+          </div>
+        </section>
+
+        <!-- Footer / small extra screen (side menu content shown in aside) -->
+        <section id="features" class="screen features-blank">
+          <div class="section-head">
+            <h2>More Screens</h2>
+            <p class="muted">
+              Use the side menu for navigation or open the splash screen.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
